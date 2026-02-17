@@ -1,2 +1,2 @@
-almafa.html 
-# nem jó?
+# Rossz link....
+https://harcos-12.github.io/almafa.html
