@@ -2,6 +2,21 @@
 <html>
 <head>
 <link rel="stylesheet" href="../almafa-classic.css">
+<style>
+  article {
+    width: 48.9%;
+    background-color: #ffffff;
+    border-width: 0;
+    border-radius: 0;
+  }
+  aside {
+    width: 48.9%;
+    background-color: #ffffff;
+    border-width: 0;
+    border-radius: 0;
+    float: right;
+  }
+</style>
 </head>
 <body>
 <img src="almafa.png" alt="Logó" style="float:right;height:100px">
@@ -15,45 +30,20 @@
   <br>
 </ul>
 
-<script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-import { STLLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/STLLoader.js';
+<h1>Első vonatok</h1>
 
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xf0f0f0);
+<article>
+<p1 style="font-size:1000%;color:white">láthatatln</p1>
+<h3>&nbsp;Vonat 0.2</h3>
+<img src="vonat 0.2.png" alt="Vonat 0.2" style="width: 80%;">
+<p>Az első vonat, amit még a Tomika Vasút irányítása alatt készült.</p>
+</article>
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
-camera.position.z = 100;
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(1, 1, 1);
-scene.add(light);
-
-const loader = new STLLoader();
-loader.load('model.stl', function (geometry) {
-
-    const material = new THREE.MeshStandardMaterial({ color: 0x0077ff });
-    const mesh = new THREE.Mesh(geometry, material);
-
-    geometry.center(); // középre igazítás
-    scene.add(mesh);
-
-});
-
-function animate() {
-    requestAnimationFrame(animate);
-    scene.rotation.y += 0.01;
-    renderer.render(scene, camera);
-}
-
-animate();
-
-</script>
-
+<aside>
+<h3>&nbsp;Vonat 0.3</h3>
+<img src="vonat 0.3.png" alt="Vonat 0.3" style="width: 80%;">
+<p>Az első vonat, amit még a Tomika Vasút irányítása alatt készült.</p>
+</aside>
 
 </body>
 </html>
